@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm} % Needed for the 'solution' environment
+
+\newtheorem{solution}{Solution} % Define the 'solution' environment
+
+\begin{document}
+
+\begin{solution}[Exercise 4.29]
+    Let $SL(2, 5)$ denote the group of $2 \times 2$ matrices over $\mathbb{Z}_5$ with determinant $1$.
+
+    \begin{enumerate}
+        \item[(i)] To compute $|SL(2,5)|$, recall that
+        \[
+        |\mathrm{GL}_2(\mathbb{F}_5)| = (5^2 - 1)(5^2 - 5) = 24 \cdot 20 = 480.
+        \]
+        The determinant map $\det: \mathrm{GL}_2(\mathbb{F}_5) \to \mathbb{F}_5^*$ is a surjective group homomorphism with kernel $SL(2,5)$. Since $|\mathbb{F}_5^*| = 4$, we get
+        \[
+        |SL(2,5)| = \frac{|\mathrm{GL}_2(\mathbb{F}_5)|}{|\mathbb{F}_5^*|} = \frac{480}{4} = 120.
+        \]
+
+        \item[(ii)] We know that $SL(2,5)$ has center $Z(SL(2,5)) = \{\pm I\}$. Note that $-I$ is the only element of order 2 in this group, i.e., the only involution. Indeed, any other matrix with determinant 1 and square equal to the identity must lie in the center, but the center has only two elements. Thus, there is a unique involution.
+
+        Let $P$ be a Sylow 2-subgroup of $SL(2,5)$. Then $|P| = 8$, and it must contain the unique involution $-I$. But the quaternion group $Q_8$ is the only group of order 8 with a unique involution. Hence, $P \cong Q_8$.
+
+        \item[(iii)] In contrast, consider $S_5$. Let it act naturally on $\{1,2,3,4,5\}$. The symmetries of a square (say, acting on $\{1,2,3,4\}$) form a subgroup isomorphic to the dihedral group $D_4$ of order 8. This subgroup lies inside $S_5$ and is a Sylow 2-subgroup, since $8$ divides $120 = |S_5|$, and no larger power of 2 does. All Sylow 2-subgroups are conjugate, so every Sylow 2-subgroup of $S_5$ is isomorphic to $D_4$. Therefore, $SL(2,5)$ and $S_5$ cannot be isomorphic, since one has a Sylow 2-subgroup isomorphic to $Q_8$ and the other to $D_4$.
+
+        \item[(iv)] Since $|SL(2,5)| = 120$ and $|A_5| = 60$, it is natural to ask whether $A_5$ embeds into $SL(2,5)$. But we already know that
+        \[
+        SL(2,5)/Z(SL(2,5)) \cong PSL(2,5) \cong A_5.
+        \]
+        Thus, if $A_5$ were to embed into $SL(2,5)$, the composition with the projection would give an automorphism of $A_5$. This would split the short exact sequence
+        \[
+        1 \to Z(SL(2,5)) \to SL(2,5) \to A_5 \to 1,
+        \]
+        giving a section $A_5 \hookrightarrow SL(2,5)$. But this sequence does not split, so no such embedding exists. Hence, $A_5$ cannot be embedded in $SL(2,5)$.
+    \end{enumerate}
+\end{solution}
+
+\end{document}

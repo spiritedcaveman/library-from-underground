@@ -1,0 +1,14 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+\begin{solution}[Exercise 4.28]
+    Let $G = Q_8 \times A \times B$, where $A$ is a (necessarily abelian) group of exponent 2 and $B$ is an abelian group in which every element has odd order. We are tasked with proving that every subgroup of $G$ is normal.
+
+    Since $Q_8$ is Hamiltonian, all its subgroups are normal. Both $A$ and $B$ are abelian, so all their subgroups are also normal.\\
+
+    Moreover, since $G$ is a direct product, every subgroup $H \le G$ is contained in some internal direct product $Q_8 \times A' \times B'$, where $A' \le A$, $B' \le B$, and the projections of $H$ into each factor yield subgroups. Since $A$ has exponent 2, it is an elementary abelian 2-group, so $A \times B$ is abelian. Thus, the commutator subgroup $[G, G] \subseteq Q_8$. Since $Q_8$ is normal in $G$, and the only nonabelian factor, any conjugation acts trivially on $A$ and $B$. Therefore, for any $g \in G$, conjugation by $g$ preserves $H$, so $H \trianglelefteq G$. Hence, every subgroup of $G$ is normal.
+\end{solution}
+
+\end{document}

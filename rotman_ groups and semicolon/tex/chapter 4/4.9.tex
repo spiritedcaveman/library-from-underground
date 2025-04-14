@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+For Exercise 4.9 (i) and (ii):
+
+Let $x \in X$. Since $H$ acts transitively on $X$, for any $g \in G$, we can find $h \in H$ such that:
+$$
+h \cdot x = g \cdot x \quad \Rightarrow \quad h^{-1}g \cdot x = x \quad \Rightarrow \quad h^{-1}g \in G_x.
+$$
+So $g = h \cdot (h^{-1}g) \in H G_x$. Hence:
+$$
+G = H G_x.
+$$
+
+The Frattini argument follows directly from the general fact that \textbf{if a subgroup $H \le G$ acts transitively on a finite $G$-set $X$}, then $G = H G_x$ for any $x \in X$. In the Frattini setting, \textbf{$G$ acts on the set of Sylow $p$-subgroups of a normal subgroup $K$ by conjugation, and $K$ acts transitively on this set by Sylow’s theorem.} Fixing a Sylow $p$-subgroup $P \le K$, its stabilizer under the action is $N_G(P)$. Thus, applying the transitivity result yields $G = K N_G(P)$, which is precisely the Frattini argument.
+
+\end{document}
