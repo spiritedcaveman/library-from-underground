@@ -8,6 +8,10 @@
 *.out
 *.bbl
 *.blg
-*._.DS_Store
-*.DS_Store
+
+# macOS metadata files
+.DS_Store
 ._*
+
+# Optional: Ignore other macOS-specific files
+*.DS_Store
