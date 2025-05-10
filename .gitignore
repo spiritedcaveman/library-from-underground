@@ -15,3 +15,8 @@
 
 # Optional: Ignore other macOS-specific files
 *.DS_Store
+# Obsidian system files
+.json
+.js
+.css
+.obsidian/
