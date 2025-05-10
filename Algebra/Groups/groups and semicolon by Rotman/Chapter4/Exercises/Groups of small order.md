@@ -9,10 +9,7 @@
   $$ \begin{bmatrix} 
    0 & 1 \\
   -1 & 0 \\
-  \end{bmatrix} \quad \text{and} \quad  \begin{bmatrix} 
-   0 & i \\
-   i & 0 \\
-  \end{bmatrix} $$
+  \end{bmatrix}$$
  then $G \cong Q_8$ (the quaternion group of order 8). (See [[Cyclic Groups]])
  
  Proof.
