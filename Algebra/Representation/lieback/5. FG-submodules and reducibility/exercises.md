@@ -1,0 +1,88 @@
+
+# 1.
+Let $G = C_2 = \langle a : a^2 = 1 \rangle$, and let $V = F^2$. For $(\alpha, \beta) \in V$, define $(\alpha, \beta)1 = (\alpha, \beta)$ and $(\alpha, \beta)a = (\beta, \alpha)$. Verify that $V$ is an $FG$-module and find all the $FG$-submodules of $V$.
+
+Soln.
+ Take the natural basis: $v_1 = (1, 0)$, $v_2 = (0, 1)$. The group action swaps coordinates:
+$$a \cdot v_1 = v_2, \quad a \cdot v_2 = v_1.$$So the action of $a$ on $V$ is given by the matrix:
+$$\rho(a) = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}.$$This is linear, $a^2 = 1$, and it defines a representation $\rho: G \to \text{GL}(V)$, so $V$ is an $FG$-module.
+
+The submodules are the subspaces of $V$ that are preserved under the action of $a$. Since $a$ swaps the coordinates, any subspace $W \subseteq V$ must be mapped into itself by the swap to be an $FG$-submodule. The vectors that remain in their span under swapping are precisely the eigenvectors of the action matrix $\rho(a)$, so the submodules correspond to the eigenspaces of $\rho(a)$: $\langle (1,1) \rangle$ and $\langle (1,-1) \rangle$, which are invariant lines. Thus, these lines, along with $\{0\}$ and $V$, are the only $FG$-submodules.
+
+
+**note**: not all representation is gonna be this nice and then the action is gonna be defined via multiple maps and the so many dirty things can happen between those two maps
+
+---
+
+# 2.
+Let $\rho$ and $\sigma$ be equivalent representations of the group $G$ over $F$. Prove that if $\rho$ is reducible then $\sigma$ is reducible.
+
+Soln.
+Let $\rho, \sigma : G \to \mathrm{GL}(V)$ be equivalent representations over a field $F$. Then there exists an isomorphism of vector spaces (an invertible $F$-linear map) $T : V \to V$ such that:
+$$\sigma(g) = T \rho(g) T^{-1} \quad \text{for all } g \in G.$$
+This is exactly the definition of equivalence of representations.
+Now, if $\rho$ is reducible, there exists a nontrivial $\rho(G)$-invariant subspace $W \subset V$. Then $T(W)$ is a subspace of $V$ invariant under $\sigma(G)$, because for all $g \in G$,
+$$\sigma(g)(T(w)) = T(\rho(g)w) \in T(W).$$
+Thus $T(W)$ is a $\sigma$-invariant subspace — so $\sigma$ is reducible too.
+
+---
+ 
+# 3.
+Which of the four representations of $D_{12}$ defined in [[Algebra/Representation/lieback/3. Group representation/exercises|exercises]] are irreducible?
+
+Soln.
+see chat
+
+# 4.
+Define the permutations $a, b, c \in S_6$ by
+$$a = (1 \ 2 \ 3), \quad b = (4 \ 5 \ 6), \quad c = (2 \ 3)(4 \ 5),$$
+and let $G = \langle a, b, c \rangle$.
+(a) Check that
+$$a^3 = b^3 = c^2 = 1, \quad ab = ba,$$
+$$c^{-1}ac = a^{-1} \quad \text{and} \quad c^{-1}bc = b^{-1}.$$
+Deduce that $G$ has order 18.
+
+this is non split semi direct product this is [frobenius?](https://groupprops.subwiki.org/wiki/Generalized_dihedral_group_for_E9) 
+
+Let's classify order of groups 18 apart from the cyclic and dihedral one
+**Step 1: Structure of $G$**
+You’re given:
+
+$\circ$ $a = (1 \ 2 \ 3)$: 3-cycle $\implies$ order 3.
+$\circ$ $b = (4 \ 5 \ 6)$: disjoint 3-cycle $\implies$ order 3.
+$\circ$ $ab = ba \implies$ the subgroup $\langle a, b \rangle \cong \mathbb{Z}/3 \times \mathbb{Z}/3 \cong V$.
+$\circ$ $c = (2 \ 3)(4 \ 5)$: involution, and it conjugates $a \mapsto a^{-1}$, $b \mapsto b^{-1}$.
+
+So:
+
+$\circ$ $c$ normalizes $V = \langle a, b \rangle$.
+$\circ$ $c^2 = 1$, so $\langle c \rangle \cong \mathbb{Z}/2$.
+$\circ$ Thus $G = V \rtimes \langle c \rangle$, where $c$ acts on $V$ by inversion.
+
+**Step 2: Identify the action**
+Let’s identify the automorphism $\varphi$ of $V$ induced by conjugation by $c$:
+$$cac^{-1} = a^{-1}$$
+$$cbc^{-1} = b^{-1}$$
+So $\varphi: V \to V$ sends each generator to its inverse $\implies$ it's the automorphism $x \mapsto x^{-1}$ on $V \cong (\mathbb{Z}/3)^2$.
+
+In additive notation (identifying $V \cong \mathbb{F}_3^2$), inversion becomes negation: $v \mapsto -v$, which is linear and diagonalizable with eigenvalues $\pm 1$. Over $\mathbb{F}_3$, $-1 = 2 \neq 1$, so this automorphism is nontrivial.
+
+**Step 3: Classify the group**
+You’re looking at $G = (\mathbb{Z}/3 \times \mathbb{Z}/3) \rtimes \mathbb{Z}/2$, where $\mathbb{Z}/2$ acts by inverting both components.
+This is one of the three non-isomorphic groups of order 18:
+
+$\circ$ $\mathbb{Z}_3 \times S_3$
+$\circ$ $(\mathbb{Z}_3 \times \mathbb{Z}_3) \rtimes \mathbb{Z}_2$ with trivial action $\implies$ abelian
+$\circ$ $(\mathbb{Z}_3 \times \mathbb{Z}_3) \rtimes \mathbb{Z}_2$ with inversion action $\implies$ [inverting shit](https://groupprops.subwiki.org/wiki/Generalized_dihedral_group_for_E9)
+
+Hence:
+ $$G \cong \left( \mathbb{Z}_3 \times \mathbb{Z}_3 \right) \rtimes \mathbb{Z}_2, \quad \text{with } x \mapsto -x \text{ action}.$$ This group is non-abelian, of order 18, and not isomorphic to $\mathbb{Z}_3 \times S_3$. This is the "non-split" semidirect product you're thinking of where the $\mathbb{Z}_2$ acts nontrivially on both components of $V$.
+
+
+(b) Suppose that $\varepsilon$ and $\eta$ are complex cube roots of unity. Prove that there is a representation $\rho$ of $G$ over $\mathbb{C}$ such that
+$$\rho(a) = \begin{pmatrix} \varepsilon & 0 & 0 \\ 0 & \varepsilon^{-1} & 0 \\ 0 & 0 & 1 \end{pmatrix}, \quad \rho(b) = \begin{pmatrix} \eta & 0 & 0 \\ 0 & \eta^{-1} & 0 \\ 0 & 0 & 1 \end{pmatrix}, \quad \rho(c) = \begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & -1 \end{pmatrix}.$$
+(c) For which values of $\varepsilon, \eta$ is $\rho$ faithful?
+(d) For which values of $\varepsilon, \eta$ is $\rho$ irreducible?
+
+# 5.
+Let $G = C_{13}$. Find a $\mathbb{C}G$-module which is neither reducible nor irreducible.

@@ -1,0 +1,29 @@
+definiton of known things in term of the module structure
+
+(1) The trivial $FG$-module is the 1-dimensional vector space $V$ over $F$ with
+$$vg = v \quad \text{for all } v \in V, g \in G.$$
+
+(2) An $FG$-module $V$ is faithful if the identity element of $G$ is the only element $g$ for which
+$$vg = v \quad \text{for all } v \in V.$$
+
+
+Definition
+Let $G$ be a subgroup of $S_n$. The $FG$-module $V$ with basis $v_1, \dots, v_n$ such that
+$$v_i g = v_{ig}$$
+for all $i$, and all $g \in G$,
+is called the permutation module for $G$ over $F$. We call $v_1, \dots, v_n$ the natural basis of $V$.
+
+
+
+
+Let $G$ be a group and $F$ a field.
+
+Then the **group algebra** $FG$ is a ring, and any representation $\rho : G \to \text{GL}(V)$ gives $V$ the structure of a **left $FG$-module**, where:
+
+* You define the action of each $g \in G$ on $v \in V$ as $v \cdot g := \rho(g)(v)$
+* Extend this linearly over all of $FG$
+
+So the map
+$$FG \times V \to V$$
+given by $(\sum a_g g, v) \mapsto \sum a_g \rho(g)(v)$
+makes $V$ an $FG$-module **exactly when** the representation $\rho$ respects the group structure (i.e. $\rho(gh) = \rho(g)\rho(h)$).

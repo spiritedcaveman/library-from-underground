@@ -1,0 +1,172 @@
+
+# 1.
+Suppose that $G = D_8 = \langle a, b : a^4 = b^2 = 1, b^{-1} ab = a^{-1} \rangle$.
+(a) Let $x$ and $y$ be the following elements of $\mathbb{C}G$:
+ $$x = a + 2a^2, \quad y = b + ab - a^2.$$
+ Calculate $xy$, $yx$ and $x^2$.
+$$xy = (a + 2a^2)(b + ab - a^2)
+ = a(b + ab - a^2) + 2a^2(b + ab - a^2)
+
+ = ab + a^2b - aa^2 + 2a^2b + 2a^3b - 2a^4
+
+ = ab + a^2b - a^3 + 2a^2b + 2a^3b - 2
+
+ = ab + 3a^2b + 2a^3b - a^3 - 2$$
+ $$yx = (b + ab - a^2)(a + 2a^2) = b(a + 2a^2) + ab(a + 2a^2) - a^2(a + 2a^2) = ba + 2ba^2 + aba + 2aba^2 - a^3 - 2a^4 = a^{-1}b + 2a^{-2}b + a^{-2}b + 2a^{-3}b - a^3 - 2 = a^{-1}b + 3a^{-2}b + 2a^{-3}b - a^3 - 2$$
+ 
+ $$x^2 = (a + 2a^2)^2 = a^2 + 4a^3 + 4a^4 = a^2 + 4a^3 + 4$$
+
+ ---
+ 
+(b) Let $z = b + a^2 b$. Show that $zg = gz$ for all $g \in G$. Deduce that $zr = rz$ for all $r \in \mathbb{C}G$.
+
+ $za = ab + a^{-1}b = az$.
+ $zb = 1 + a^2 = bz$.
+
+Since $za = az$ and $zb = bz$, we have shown that $z$ commutes with the generators of $G$.
+
+So, $zg=gz$ for all $g \in G$.
+
+
+Any element $r \in \mathbb{C}G$ can be written as a linear combination of elements of $G$: $$r = \sum_{g \in G} c_g g, \quad c_g \in \mathbb{C}$$Then,$$zr = z \left( \sum_{g \in G} c_g g \right) = \sum_{g \in G} c_g (zg) = \sum_{g \in G} c_g (gz) = \left( \sum_{g \in G} c_g g \right) z = rz$$ Therefore, $zr = rz$ for all $r \in \mathbb{C}G$.
+
+
+==$\boxed{zg = gz \text{ for all } g \in G \implies zr = rz \text{ for all } r \in \mathbb{C}G}$
+
+---
+
+# 2.
+Work out matrices for the regular representation of $C_2 \times C_2$ over $F$.
+
+$\mathcal{B} = \{e, a, b, ab\}$
+
+Now, $[e]_{\mathcal{B}} = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} = I_4$;  $[a]_{\mathcal{B}} = \begin{bmatrix} 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{bmatrix}$;
+
+
+$[b]_{\mathcal{B}} = \begin{bmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \end{bmatrix}$ ; $[ab]_{\mathcal{B}} = \begin{bmatrix}0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \end{bmatrix}$
+
+
+
+---
+
+
+# 3.
+Let $G = C_2$. For $r$ and $s$ in $\mathbb{C}G$, does $rs = 0$ imply that $r = 0$ or $s = 0$?
+
+Soln.
+ Let $G = C_2 = {1, g}$ with $g^2 = 1$. Then any $r, s \in \mathbb{C}G$ can be written as:
+
+$$
+r = r_1 \cdot 1 + r_2 \cdot g, \quad s = s_1 \cdot 1 + s_2 \cdot g
+$$
+
+where $r_1, r_2, s_1, s_2 \in \mathbb{C}$. Multiply:
+
+$$
+rs = (r_1 + r_2g)(s_1 + s_2g) = r_1s_1 + r_1s_2g + r_2s_1g + r_2s_2g^2
+$$
+
+$$
+= r_1s_1 + r_2s_2 + (r_1s_2 + r_2s_1)g
+$$
+
+So
+
+$$
+rs = (r_1s_1 + r_2s_2) \cdot 1 + (r_1s_2 + r_2s_1) \cdot g
+$$
+
+Suppose $rs = 0$. Then:
+
+$$
+r_1s_1 + r_2s_2 = 0, \quad r_1s_2 + r_2s_1 = 0
+$$
+
+This system has nontrivial solutions. For example:
+
+$$
+r = 1 + g, \quad s = 1 - g \Rightarrow rs = (1 + g)(1 - g) = 1 - g^2 = 0
+$$
+
+but $r, s \ne 0$. Hence, $\mathbb{C}G$ is **NOT** a domain.
+
+$$
+\boxed{\mathbb{C}C_2 \text{ is not a domain; } rs = 0 \nRightarrow r = 0 \text{ or } s = 0}
+$$
+
+
+
+---
+
+# 4.
+ Assume that $G$ is a finite group, say $G = \{g_1, \dots, g_n\}$, and write $c$ for the element $\sum_{i=1}^n g_i$ of $\mathbb{C}G$.
+**(a) Prove that $ch = hc = c$ for all $h \in G$.**
+Soln.
+ Let $G = {g_1, \dots, g_n}$ and define $c = \sum_{i=1}^n g_i \in \mathbb{C}G$. Take any $h \in G$.
+
+Then:
+
+$$
+ch = \left(\sum_{i=1}^n g_i\right) h = \sum_{i=1}^n g_i h
+$$
+
+Since $h \in G$, the map $g_i \mapsto g_i h$ is a permutation of $G$, so ${g_1 h, \dots, g_n h} = {g_1, \dots, g_n}$. Hence:
+
+$$
+ch = \sum_{i=1}^n g_i = c
+$$
+
+Similarly:
+
+$$
+hc = h \left( \sum_{i=1}^n g_i \right) = \sum_{i=1}^n h g_i
+$$
+
+and ${h g_i}$ is again a permutation of $G$, so:
+
+$$
+hc = \sum_{i=1}^n g_i = c
+$$
+
+Thus:
+
+$$
+\boxed{ch = hc = c \quad \text{for all } h \in G}
+$$
+
+(b) Deduce that $c^2 = |G|c$.
+
+Soln.
+$$
+c = \sum_{g \in G} g, \quad \text{so} \quad c^2 = \left( \sum_{g \in G} g \right) \left( \sum_{h \in G} h \right) = \sum_{g, h \in G} gh
+$$
+
+Since the product $gh$ ranges over all elements of $G$, and each element appears exactly $|G|$ times (once for each $g$), we get:
+
+$$
+c^2 = |G| \sum_{x \in G} x = |G|c
+$$
+
+---
+
+(c) Let $\vartheta: \mathbb{C}G \to \mathbb{C}G$ be the linear transformation sending $v$ to $vc$ for all $v$ in $\mathbb{C}G$. What is the matrix $[\vartheta]_{\mathcal{B}}$, where $\mathcal{B}$ is the basis $g_1, \dots, g_n$ of $\mathbb{C}G$?
+
+Soln.
+ Since $\vartheta(v) = vc$ and $c = \sum_{j=1}^n g_j$, 
+
+$$\vartheta(g_i) = g_i c = \sum_{j=1}^n g_i g_j$$As $g_i g_j$ runs over all elements of $G$, we get:$$\vartheta(g_i) = \sum_{k=1}^n g_k = c \quad \text{for all } i$$So every basis vector maps to $c = \sum_{k=1}^n g_k$, meaning the matrix $[\vartheta]_{\mathcal{B}}$ has all columns equal to the column vector corresponding to $c$ in the basis $\mathcal{B}$. If we represent $c$ in the basis $\mathcal{B} = \{g_1, \dots, g_n\}$, the coordinates are all $1$. Therefore, the matrix $[\vartheta]_{\mathcal{B}}$ has all columns equal to the column vector of all $1$s:$$[\vartheta]_{\mathcal{B}} = \begin{bmatrix}
+1 & 1 & \cdots & 1 \\
+1 & 1 & \cdots & 1 \\
+\vdots & \vdots & \ddots & \vdots \\
+1 & 1 & \cdots & 1
+\end{bmatrix} \in M_{n \times n}(\mathbb{C})$$
+
+
+---
+
+# 5.
+If $V$ is an $FG$-module, prove from the definition that
+$$0r = 0 \quad \text{for all } r \in FG,$$   $$v0 = 0 \quad \text{for all } v \in V,$$    where the symbol $0$ is used for the zero elements of $V$ and $FG$.
+
+**Show that for every finite group $G$, with $|G| > 1$, there exists an $FG$-module $V$ and elements $v \in V$, $r \in FG$ such that $vr = 0$, but neither $v$ nor $r$ is $0$.**
+
