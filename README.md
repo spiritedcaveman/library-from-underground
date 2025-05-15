@@ -11,3 +11,5 @@ If you stumble upon this and want to follow along or ask something, join **Mathc
 👉 [discord.gg/math](https://discord.gg/math)
 
 Everything here is a work in progress, like me.
+
+Open the files with [obsidian](https://obsidian.md/)
