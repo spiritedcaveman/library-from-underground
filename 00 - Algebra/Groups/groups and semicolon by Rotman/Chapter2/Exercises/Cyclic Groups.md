@@ -1,4 +1,5 @@
 
+
 # 2.24.
  Let $G = \langle A, B \rangle \le \text{GL}(2, \mathbb{C})$, where
  $$A = \begin{bmatrix} 0 & i \\ i & 0 \end{bmatrix} \quad \text{and} \quad B = \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}.$$ Show that $G$ is a nonabelian group (so $G$ is not cyclic) of order 8 having a unique subgroup of order 2. (See Theorem 4.22.)
