@@ -40,3 +40,15 @@ is continuous, by hypothesis.
 Also, $\varphi$ is continuous because $\nu$ is an identification. We conclude that $\varphi$ is a
 homeomorphism, and the result follows at once.
 
+
+
+
+$X$ is contractible if and only if $X$ has the homotopy type of one-point space
+
+
+$$PC_x(T) = \bigcup \{A \subseteq T : x \in A \text{ and } A \text{ is path-connected}\}$$
+
+The path component of $T$ containing $x$ is defined as:
+**the maximal path-connected set of $T$ that contains $x$.**
+
+So: **non-open path components** arise when you can't move from a point along a path within arbitrarily small open sets. That’s failure of local path-connectedness.
