@@ -67,7 +67,7 @@ a & b \\ c & d
 $$
 
 
-$PSL_{2}(\mathbb{R})$ $=$ $\frac{SL_{2}(\mathbb{R})}{\pm 1}$
+$PSL_{2}(\mathbb{R})$ $=$ $\frac{SL_{2}(\mathbb{R})}{\pm I}$
 
 
 it is the automorphism of the upper half plane in complex-analysis $\tau \in H$
